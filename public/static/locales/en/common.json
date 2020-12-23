@@ -1,0 +1,9 @@
+{
+  "mainTitle": "Main page",
+  "aboutTitle": "About us",
+  "navigation": {
+    "home": "Home",
+    "about": "About us",
+    "blog": "Blog"
+  }
+}

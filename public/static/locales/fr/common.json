@@ -1,0 +1,9 @@
+{
+  "mainTitle":"Page d'accueil",
+  "aboutTitle": "À propos",
+  "navigation": {
+    "home": "Principale",
+    "about": "À propos",
+    "blog": "Blog"
+  }
+}

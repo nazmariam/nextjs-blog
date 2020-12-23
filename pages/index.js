@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import React from "react";
 import Layout from "../comoponents/layout";
+import PropTypes from 'prop-types';
+import { withTranslation } from '../i18n';
 
-export default function Home() {
+function Home({t}) {
   return (
       <>
       <Layout>
@@ -12,17 +14,13 @@ export default function Home() {
         </Head>
         <main>
           <h1 className="title">
-            Main page
+            {t('mainTitle')}
           </h1>
 
           <p className="description">
             so exciting!
           </p>
         </main>
-
-        <footer>
-          will be lang switcher soon
-        </footer>
       </Layout>
 
 
@@ -161,3 +159,13 @@ export default function Home() {
 
   )
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common'],
+})
+
+Home.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+
+export default withTranslation('common')(Home)

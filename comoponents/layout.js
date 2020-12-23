@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/layout.module.scss'
 import React from "react";
 import Navigation from "./navigation";
+import LangSwitcher from "./lang-switcher";
 
 export const siteTitle = 'SEO title'
 
@@ -27,6 +28,7 @@ export default function Layout({ children, main }) {
                 <Navigation/>
             </header>
             <main>{children}</main>
+            <LangSwitcher />
         </div>
     )
 }

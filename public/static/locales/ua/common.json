@@ -1,0 +1,9 @@
+{
+  "mainTitle": "Головна сторінка",
+  "aboutTitle": "Про нас",
+  "navigation": {
+    "home": "Головна",
+    "about": "Про нас",
+    "blog": "Блог"
+  }
+}

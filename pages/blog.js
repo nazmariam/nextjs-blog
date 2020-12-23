@@ -1,14 +1,15 @@
 import React from 'react';
-import Navigation from "../comoponents/navigation";
 import utilStyles from '../styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
 import BlogLayout from "../comoponents/blog-layout";
+import PropTypes from 'prop-types';
+import { withTranslation } from '../i18n';
 
 
-const Blog = ({ allPostsData }) => (
+const Blog = ({ allPostsData, t }) => (
     <div>
         <BlogLayout main>
-            <h1>Blog</h1>
+            <h1>{t('subtitle')}</h1>
             <ul className={utilStyles.list}>
                 {allPostsData.map(({ id, date, title }) => (
                     <li className={utilStyles.listItem} key={id}>
@@ -29,9 +30,14 @@ export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
     return {
         props: {
-            allPostsData
-        }
+            allPostsData,
+            namespacesRequired: ['blog'],
+        },
     }
 }
 
-export default Blog;
+Blog.propTypes = {
+    t: PropTypes.func.isRequired,
+}
+
+export default withTranslation('blog')(Blog)

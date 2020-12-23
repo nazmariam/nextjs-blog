@@ -4,11 +4,14 @@ import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
 import React from "react";
 import Navigation from "./navigation";
+import LangSwitcher from "./lang-switcher";
+import PropTypes from 'prop-types';
+import { withTranslation } from '../i18n';
 
 const name = 'Articles'
 export const siteTitle = 'SEO title'
 
-export default function BlogLayout({ children, main }) {
+function BlogLayout({ children, main, t }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -35,7 +38,7 @@ export default function BlogLayout({ children, main }) {
                             className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                             alt={name}
                         />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                        <h1 className={utilStyles.heading2Xl}>{t('title')}</h1>
                     </>
                 ) : (
                     <>
@@ -55,6 +58,17 @@ export default function BlogLayout({ children, main }) {
                     </Link>
                 </div>
             )}
+            <LangSwitcher />
         </div>
     )
 }
+
+BlogLayout.getInitialProps = async () => ({
+    namespacesRequired: ['blog'],
+})
+
+BlogLayout.propTypes = {
+    t: PropTypes.func.isRequired,
+}
+
+export default withTranslation('blog')(BlogLayout)

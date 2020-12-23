@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-function ActiveLink({ children, href }) {
+function ActiveLink({ children, href, locale }) {
     const router = useRouter()
     const style = {
         marginRight: 10,
@@ -9,7 +9,7 @@ function ActiveLink({ children, href }) {
 
     const handleClick = (e) => {
         e.preventDefault()
-        router.push(href)
+        router.push(href, href, { locale: locale })
     }
 
     return (
