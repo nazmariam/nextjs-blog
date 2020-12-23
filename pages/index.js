@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import React from "react";
-import Layout from "../comoponents/layout";
+import React from 'react';
+import Layout from '../comoponents/layout';
 import PropTypes from 'prop-types';
 import { withTranslation } from '../i18n';
 
@@ -160,9 +160,13 @@ function Home({t}) {
   )
 }
 
-Home.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+export async function getServerSideProps() {
+  return {
+    props: {
+      namespacesRequired: ['common'],
+    }
+  }
+}
 
 Home.propTypes = {
   t: PropTypes.func.isRequired,

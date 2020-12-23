@@ -5,7 +5,6 @@ import styles from "../../styles/layout.module.scss";
 
 export default function Post({ postData }) {
     return (
-
         <div>
             <BlogLayout article>
                 <img
@@ -23,19 +22,23 @@ export default function Post({ postData }) {
     )
 }
 
-export async function getStaticPaths() {
-    const paths = getAllPostIds()
-    return {
-        paths,
-        fallback: false
-    }
-}
+// export async function getStaticPaths() {
+//     const paths = getAllPostIds()
+//     return {
+//         paths,
+//         fallback: false
+//     }
+// }
 
-export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id)
+export async function getServerSideProps({ params }) {
+    const postData = await getPostData(params.id);
+    const paths = getAllPostIds();
     return {
         props: {
-            postData
-        }
+            postData,
+            paths,
+            fallback: false
+        },
+
     }
 }

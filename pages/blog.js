@@ -26,7 +26,7 @@ const Blog = ({ allPostsData, t }) => (
     </div>
 )
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const allPostsData = getSortedPostsData()
     return {
         props: {

@@ -62,9 +62,13 @@ function BlogLayout({ children, main, t, article }) {
     )
 }
 
-BlogLayout.getInitialProps = async () => ({
-    namespacesRequired: ['blog'],
-})
+export async function getServerSideProps() {
+    return {
+        props: {
+            namespacesRequired: ['blog'],
+        }
+    }
+}
 
 BlogLayout.propTypes = {
     t: PropTypes.func.isRequired,

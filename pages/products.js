@@ -7,6 +7,7 @@ import Navigation from "../comoponents/navigation";
 import LangSwitcher from "../comoponents/lang-switcher";
 import styles from "../styles/layout.module.scss";
 import products from "../styles/products.module.scss";
+import {getPostData} from "../lib/posts";
 
 function Products({t}) {
     return (
@@ -77,9 +78,13 @@ function Products({t}) {
     )
 }
 
-Products.getInitialProps = async () => ({
-    namespacesRequired: ['products'],
-})
+export async function getServerSideProps() {
+    return {
+        props: {
+            namespacesRequired: ['products'],
+        }
+    }
+}
 
 Products.propTypes = {
     t: PropTypes.func.isRequired,

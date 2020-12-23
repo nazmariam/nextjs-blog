@@ -27,9 +27,13 @@ function Navigation({t}) {
         )
 }
 
-Navigation.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-})
+export async function getServerSideProps() {
+    return {
+        props: {
+            namespacesRequired: ['common'],
+        }
+    }
+}
 
 Navigation.propTypes = {
     t: PropTypes.func.isRequired,

@@ -31,10 +31,13 @@ function About({t}) {
         )
 }
 
-
-About.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-})
+export async function getServerSideProps() {
+    return {
+        props: {
+            namespacesRequired: ['common'],
+        }
+    }
+}
 
 About.propTypes = {
     t: PropTypes.func.isRequired,
