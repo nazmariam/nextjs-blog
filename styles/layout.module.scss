@@ -10,6 +10,13 @@
   align-items: center;
 }
 
+.headerNotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(3rem + 18px);
+}
+
 .headerImage {
   display: block;
   height: 6rem;
@@ -28,4 +35,19 @@
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.centerNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  width: 100vw;
+
+  img {
+    width: 100%;
+    max-width: 900px;
+  }
 }
