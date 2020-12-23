@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cleanmymac",
+    "name": "CleanMyMac X",
+    "link": "https://macpaw.com/cleanmymac",
+    "image": "https://cdn2.macpaw.com/images/CleanMyMac-X@2x.png"
+  },
+  {
+    "id": "clearvpn",
+    "name": "ClearVPN",
+    "link": "https://macpaw.com/clearvpn",
+    "image": "https://cdn2.macpaw.com/images/256.png"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "link": "https://macpaw.com/gemini",
+    "image": "https://cdn2.macpaw.com/images/f78c7f7f04d0538b31e9d5f4a8b3c703.png"
+  }
+]
