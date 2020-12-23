@@ -1,0 +1,134 @@
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -70px;
+  padding-bottom: 70px;
+}
+
+.center {
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.products {
+  margin: 64px 0;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.productsProduct {
+  min-width: 194px;
+  margin: 8px;
+  padding: 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, .04);
+  text-align: center;
+}
+
+.productsName {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.productsImage {
+  margin-bottom: 6px;
+}
+
+.productsImage img {
+  width: 96px;
+}
+
+.productsDescription {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .48);
+}
+
+.banner {
+  padding: 24px;
+  font-size: 24px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+  background: linear-gradient(155deg, rgba(255, 220, 229, 0.5), rgba(199, 229, 255, 0.5)) no-repeat;
+}
+
+.banner span {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.navigation {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.store {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.storeProduct {
+  position: relative;
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, .04);
+}
+
+.storeAbout {
+  margin-left: 24px;
+}
+
+.storeName {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.storeDescription {
+  color: rgba(0, 0, 0, .48);
+}
+
+.storeRemove {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.productFooter {
+  background: #f3f3f3;
+  padding: 27px 12px;
+  font-size: 12px;
+  text-align: center;
+}

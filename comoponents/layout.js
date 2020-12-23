@@ -6,7 +6,7 @@ import LangSwitcher from "./lang-switcher";
 
 export const siteTitle = 'SEO title'
 
-export default function Layout({ children, main }) {
+export default function Layout({ children}) {
     return (
         <div className={styles.container}>
             <Head>
@@ -26,9 +26,9 @@ export default function Layout({ children, main }) {
             </Head>
             <header className={styles.header}>
                 <Navigation/>
+                <LangSwitcher />
             </header>
             <main>{children}</main>
-            <LangSwitcher />
         </div>
     )
 }

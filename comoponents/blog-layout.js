@@ -31,6 +31,8 @@ function BlogLayout({ children, main, t }) {
             </Head>
             <header className={styles.header}>
                 <Navigation />
+                <LangSwitcher />
+
                 {main ? (
                     <>
                         <img
@@ -58,7 +60,6 @@ function BlogLayout({ children, main, t }) {
                     </Link>
                 </div>
             )}
-            <LangSwitcher />
         </div>
     )
 }

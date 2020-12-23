@@ -20,6 +20,9 @@ function Navigation({t}) {
                 <li className={navigation.item}>
                     <ActiveLink children={t('navigation.blog')} href={'/blog'}  locale={locale} />
                 </li>
+                <li className={navigation.item}>
+                    <ActiveLink children={t('navigation.products')} href={'/products'}  locale={locale} />
+                </li>
             </ul>
         )
 }
