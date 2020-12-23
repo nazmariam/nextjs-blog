@@ -1,16 +1,13 @@
 import BlogLayout from '../../comoponents/blog-layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import Link from "next/link";
-import Navigation from "../../comoponents/navigation";
 import React from "react";
 import styles from "../../styles/layout.module.scss";
-import utilStyles from "../../styles/utils.module.scss";
 
 export default function Post({ postData }) {
     return (
 
         <div>
-            <BlogLayout>
+            <BlogLayout article>
                 <img
                     src={postData.image}
                     className={`${styles.headerImage}`}
