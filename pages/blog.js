@@ -1,7 +1,7 @@
 import React from 'react';
 import utilStyles from '../styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
-import BlogLayout from "../comoponents/blog-layout";
+import BlogLayout from '../comoponents/blog-layout';
 import PropTypes from 'prop-types';
 import { withTranslation } from '../i18n';
 

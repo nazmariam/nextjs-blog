@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { i18n } from '../i18n'
+import { i18n } from '../i18n';
 
 export default function LangSwitcher() {
     const router = useRouter();
@@ -9,8 +9,8 @@ export default function LangSwitcher() {
         <>
             <select
                 onChange={ ({target}) => {
-                    i18n.changeLanguage(target.value);
-                    router.push(pathname, pathname, { locale: target.value })
+                        i18n.changeLanguage(target.value);
+                        router.push(pathname, pathname, { locale: target.value });
                     }
                 }
                 value={locale}

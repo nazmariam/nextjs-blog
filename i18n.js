@@ -5,5 +5,8 @@ const path = require('path');
 module.exports = new NextI18Next({
     otherLanguages: ['fr', 'ua'],
     localeSubpaths,
-    localePath: path.resolve('./public/static/locales')
+    localePath: path.resolve('./public/static/locales'),
+    detection: {
+        lookupCookie: 'locale',
+    }
 })
